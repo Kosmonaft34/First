@@ -42,3 +42,34 @@ $ rm style.css (удаляем файл)
 ### Посмотреть все файлы (и скрытые) в папке:
 
 `$ ls-la`
+
+## Работа с ветвями:
+
+### Созданте новой ветви:
+
+`$ git branch new-branch`
+
+### Переключиться на новую ветвь:
+
+`$ git checkout new-branch`
+
+### Вносим изменения в файлы и делаем commit
+
+`$ git commit -am "Commits name"`
+
+### Переходим обратно в главную ветвь:
+
+` git checkout master`\
+
+### Вносим изменения в файлы и делаем commit(необязательно)
+
+`$ git commit -am "Commits name"`
+
+### Делаем слияние ветвей (необходимо убедиться в ветке master(`git status`)):
+
+`$ git merge new-brunch`
+
+### В случае конфликтов редактируем файлы и делаем индексацию файлов и commit:
+
+`$ git commit -am "Commits name"`
+
