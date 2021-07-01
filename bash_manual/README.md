@@ -57,6 +57,10 @@ $ rm style.css (удаляем файл)
 
 `$ git commit -am "Commits name"`
 
+### Просмотр истории версий кода (выйти из конца команды - клавиша q):
+
+`$ git log`
+
 ### Переходим обратно в главную ветвь:
 
 ` git checkout master`\
@@ -73,3 +77,6 @@ $ rm style.css (удаляем файл)
 
 `$ git commit -am "Commits name"`
 
+### Удалить ветку:
+
+`$ git branch -d new-branch`
