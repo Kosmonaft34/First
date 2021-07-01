@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.element{
+    border: 2px solid red;
+    width: 100px;
+    height: 100px;
+
+}
+.logo{
+    /* flex-grow: 1; */
+    margin-right: auto;
+}
