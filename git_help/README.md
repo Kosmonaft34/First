@@ -32,3 +32,41 @@ $git config --global user.email John Doe@example.com
 ### Отправляем в удалённый репозиторий:
 
 `#$ git push origin master`
+
+## Работа с ветвями:
+
+### Созданте новой ветви:
+
+`$ git branch new-branch`
+
+### Переключиться на новую ветвь:
+
+`$ git checkout new-branch`
+
+### Вносим изменения в файлы и делаем commit
+
+`$ git commit -am "Commits name"`
+
+### Просмотр истории версий кода (выйти из конца команды - клавиша q):
+
+`$ git log`
+
+### Переходим обратно в главную ветвь:
+
+` git checkout master`
+
+### Вносим изменения в файлы и делаем commit(необязательно)
+
+`$ git commit -am "Commits name"`
+
+### Делаем слияние ветвей (необходимо убедиться в ветке master(`git status`)):
+
+`$ git merge new-brunch`
+
+### В случае конфликтов редактируем файлы и делаем индексацию файлов и commit:
+
+`$ git commit -am "Commits name"`
+
+### Удалить ветку:
+
+`$ git branch -d new-branch`

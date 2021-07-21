@@ -1,8 +1,141 @@
+*{
+    box-sizing: border-box;
+}
 body{
     margin: 0;
 }
 .wallpaper{
-    background: url(pics/wallpaper.jpeg);
+    background: url(pics/wallpaper.jpeg); 
     height: 100vh;
     background-size: cover;
+}
+
+.header {
+    background-color: rgba(0, 0, 0, 0.01);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.header h1{
+    font-size: 3rem;
+
+}
+
+.header h3{
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+@media (max-width: 350px) and (orientation: portrait){
+    .header h1{
+        font-size: 2rem;
+    
+    }
+    
+    .header h3{
+        font-size: 1rem;
+     }
+
+}
+
+@media (max-width: 600px) and (orientation: landscape){
+    .header h1{
+        font-size: 2rem;
+    
+    }
+    
+    .header h3{
+        font-size: 1rem;
+     }
+
+}
+
+.order{
+    height: 100vh;
+    position: relative;
+
+}
+
+.order-background {
+    background: no-repeat url(pics/order-background.jpg); 
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+.order-info{
+    /* Position start */
+    position: absolute;
+    /*CSS absolute Выравнивание по вертикали способ 1 старт */
+    /* top: 50%;
+    /* bottom: 0; */
+    /* left: 50%; */
+     /* right: 0; */
+     /* margin: auto; */
+    /* width: 200px; */
+    /* height: 50px; */ 
+
+    /* CSS absolute Выравнивание по вертикали способ 1 конец */
+
+    /*CSS absolute Выравнивание по вертикали способ 2 старт */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /* CSS absolute Выравнивание по вертикали способ 2 конец */
+
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    z-index: 1;
+}
+.order-mask{
+    background-color:  rgba(0, 0, 0, 0.4);
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0;
+    right: 0;
+}
+
+.order-button  {
+        height: 3rem;
+    font-size: 1.2rem;
+    border: 0;
+    border-radius: 5px;
+    background: linear-gradient(45deg,green,blue);
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.order-button::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color:rgba(0, 0, 0, 0) ;
+    transition: all 0.2s;
+    /* background: linear-gradient(45deg,rgb(2, 63, 2),rgb(4, 4, 94)); */
+}
+
+.order-button:hover::after{
+    background-color:rgba(0, 0, 0, 0.3) ;
+    /* background: linear-gradient(45deg,rgb(2, 63, 2),rgb(4, 4, 94)); */
+}
+
+.order-button:active{
+    box-shadow: 0 0 10px 0.25rem rgb(243, 247, 7);
 }
