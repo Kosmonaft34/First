@@ -131,6 +131,12 @@ body{
     /* background: linear-gradient(45deg,rgb(2, 63, 2),rgb(4, 4, 94)); */
 }
 
+.order-button::before{
+    content: attr(data-name);
+    z-index: 1000;
+    position: relative;
+}
+
 .order-button:hover::after{
     background-color:rgba(0, 0, 0, 0.3) ;
     /* background: linear-gradient(45deg,rgb(2, 63, 2),rgb(4, 4, 94)); */
@@ -138,4 +144,83 @@ body{
 
 .order-button:active{
     box-shadow: 0 0 10px 0.25rem rgb(243, 247, 7);
+}
+
+.order-button-anim{
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    height: 3rem;
+    font-size: 1.2rem;
+    border: 0;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s;
+    margin-top: 1rem;
+    background-size: 150% 150%;
+    /* background-position: 0% 50%; */
+}
+
+.order-button-anim:hover{
+    /* background-position: 100% 50%; */
+    animation: gradient 1s ease forwards;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 100%;
+	}
+	100% {
+		background-position: 0% 100%;
+	}
+}
+
+.gradient{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 1s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+.content {
+ text-align: center;
+
+}
+
+.content h1{
+    color: white;
+    font-size: 2rem;
+}
+.content button {
+    border: 1px solid white;
+    height: 2rem;
+    width: 6rem;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.content button:hover{
+    color: black;
+    border-color:white;
+}
+
+.content button:first-of-type {
+    border-radius: 4px 0 0 4px;
+}
+
+.content button:last-of-type {
+    border-radius:0 4px 4px 0;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 40% 100%;
+	}
+	100% {
+		background-position: 0% 100%;
+	}
 }
