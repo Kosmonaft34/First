@@ -116,7 +116,8 @@ let input = document.createElement ('input')
 section3.append(div)
 div.append(button)
 div.append(input)
-button.textContent("Click me!")
+button.textContent="Click me!"
 input.type='text'
 input.style.marginRight= '20px'
 div.className = 'form'
+
